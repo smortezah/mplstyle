@@ -6,13 +6,13 @@ Just copy the style file, i.e. ggplot_bw.mplstyle or ggplot_classic.mplstyle, wh
 
 # Usage
 ```python
-import matplotlib as plt
+import matplotlib.pyplot as plt
 plt.style.use('ggplot_bw.mplstyle') # or ggplot_classic.mplstyle
 ```
 
 # Example
 ```python
-import matplotlib as plt
+import matplotlib.pyplot as plt
 plt.style.use('ggplot_bw.mplstyle')
 
 ```
