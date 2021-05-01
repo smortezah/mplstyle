@@ -21,7 +21,7 @@ with plt.style.context('ggplot_bw.mplstyle'):
 ```
 
 # Example
-You can run 'example.py', that basically generated the following results.
+You can run 'example.py', that basically generates the following results.
 
 ```python
 import numpy as np
