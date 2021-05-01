@@ -16,4 +16,5 @@ import matplotlib.pyplot as plt
 plt.style.use('ggplot_bw.mplstyle')
 
 ```
-![ggplot_bw style.pdf](ggplot_bw%20style.pdf?raw=true)
+![example-ggplot_bw.jpg](example-ggplot_bw.jpg)
+![example-ggplot_classic.jpg](example-ggplot_classic.jpg)
