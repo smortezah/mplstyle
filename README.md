@@ -1,16 +1,28 @@
 # Overview
-Matplotlib style sheet based on ggplot
+Matplotlib style sheet based on ggplot2.
+
+Currently, the following styles are available:
+- 'ggplot_bw': to mimic 'theme_bw'
+- 'ggplot_classic': to mimic 'theme_classic'
 
 # Installation
-Just copy the style file, i.e. ggplot_bw.mplstyle or ggplot_classic.mplstyle, where your Python source codes are.
+Just copy the style file, i.e. 'ggplot_bw.mplstyle' or 'ggplot_classic.mplstyle', where your Python source codes are.
 
 # Usage
 ```python
 import matplotlib.pyplot as plt
 plt.style.use('ggplot_bw.mplstyle') # or ggplot_classic.mplstyle
 ```
+or
+```python
+import matplotlib.pyplot as plt
+with plt.style.context('ggplot_bw.mplstyle'):
+    # PLOTTING FUNCTION
+```
 
 # Example
+You can run 'example.py', that basically generated the following results.
+
 ```python
 import numpy as np
 import pandas as pd
