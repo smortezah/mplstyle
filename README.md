@@ -16,4 +16,4 @@ import matplotlib.pyplot as plt
 plt.style.use('ggplot_bw.mplstyle')
 
 ```
-![ggplot_bw style.pdf](https://github.com/smortezah/mplstyle/files/6409514/ggplot_bw.style.pdf)
+![ggplot_bw style.pdf](https://github.com/smortezah/mplstyle/blob/main/ggplot_bw%20style.pdf)
