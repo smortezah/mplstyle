@@ -42,5 +42,5 @@ with plt.style.context('ggplot_bw.mplstyle'):
 with plt.style.context('ggplot_classic.mplstyle'):
     plot1('ggplot_classic style', 'example-ggplot_classic')
 ```
-![example-ggplot_bw](https://user-images.githubusercontent.com/19313488/116784318-8dbbc000-aa8b-11eb-855c-3323482a8503.jpg)
-![example-ggplot_classic](https://user-images.githubusercontent.com/19313488/116784327-97452800-aa8b-11eb-99d9-bbff20345893.jpg)
+![example-ggplot_bw](https://user-images.githubusercontent.com/19313488/116784350-b774e700-aa8b-11eb-8eda-deba7e4e9b93.jpg)
+![example-ggplot_classic](https://user-images.githubusercontent.com/19313488/116784351-b8a61400-aa8b-11eb-8352-b56b5b855735.jpg)
