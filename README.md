@@ -34,7 +34,7 @@ def plot1(title, filename):
     lgnd = ax.legend(title='Title of legend', loc='center',
                      bbox_to_anchor=(1.15, 0.5))
     lgnd._legend_box.align = "left"
-    fig.savefig(filename + '.jpg', bbox_inches='tight', dpi=100)
+    fig.savefig(filename + '.jpg', bbox_inches='tight', dpi=150)
 
 with plt.style.context('ggplot_bw.mplstyle'):
     plot1('ggplot_bw style', 'example-ggplot_bw')
