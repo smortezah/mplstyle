@@ -5,6 +5,10 @@ Currently, the following styles are available:
 - 'ggplot_bw': to mimic 'theme_bw'
 - 'ggplot_classic': to mimic 'theme_classic'
 
+# Requirements
+- Matplotlib >= 3.4.0
+    - To make previous versions work, 'xtick.labelcolor: 4d4d4d' and 'ytick.labelcolor: 4d4d4d' should be removed from the style sheets.
+
 # Installation
 Just copy the style file, i.e. 'ggplot_bw.mplstyle' or 'ggplot_classic.mplstyle', where your Python source codes are.
 
