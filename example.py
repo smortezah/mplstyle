@@ -7,7 +7,13 @@ ggplot_palette = sns.palettes.hls_palette(n_colors=1, l=0.65, s=1.0)
 sns.set_palette(palette=ggplot_palette)
 
 
-def plot1(title, filename):
+def plot(title: str, filename: str) -> None:
+    """Plot the data.
+
+    Args:
+        title (str): title of the plot
+        filename (str): filename to save the plot
+    """
     data = pd.DataFrame({
         'x': np.random.randn(50),
         'y': np.random.randn(50),
@@ -25,7 +31,7 @@ def plot1(title, filename):
 
 
 with plt.style.context('ggplot_bw.mplstyle'):
-    plot1('ggplot_bw style', 'example-ggplot_bw')
+    plot('ggplot_bw style', 'example-ggplot_bw')
 
 with plt.style.context('ggplot_classic.mplstyle'):
-    plot1('ggplot_classic style', 'example-ggplot_classic')
+    plot('ggplot_classic style', 'example-ggplot_classic')
