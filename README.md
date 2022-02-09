@@ -1,31 +1,37 @@
-# Overview
-Matplotlib style sheet based on ggplot2.
+# Matplotlib style sheets based on ggplot2
 
-Currently, the following styles are available:
-- 'ggplot_bw': to mimic 'theme_bw'
-- 'ggplot_classic': to mimic 'theme_classic'
+The following styles are currently available:
 
-# Requirements
+- **ggplot_bw**: to mimic "theme_bw" (R)
+- **ggplot_classic**: to mimic "theme_classic" (R)
+
+## Requirements
+
 - Matplotlib >= 3.4.0
-    - To make previous versions work, 'xtick.labelcolor: 4d4d4d' and 'ytick.labelcolor: 4d4d4d' should be removed from the style sheets.
+  - To make older versions work, *xtick.labelcolor: 4d4d4d* and *ytick.labelcolor: 4d4d4d* should be removed from the style sheets.
 
-# Installation
-Just copy the style file, i.e. 'ggplot_bw.mplstyle' or 'ggplot_classic.mplstyle', where your Python source codes are.
+## Installation
 
-# Usage
+Copy the style file, i.e. *ggplot_bw.mplstyle* or *ggplot_classic.mplstyle*, where your Python source codes are.
+
+## Usage
+
 ```python
 import matplotlib.pyplot as plt
 plt.style.use('ggplot_bw.mplstyle') # or ggplot_classic.mplstyle
 ```
+
 or
+
 ```python
 import matplotlib.pyplot as plt
 with plt.style.context('ggplot_bw.mplstyle'):
     # PLOTTING FUNCTION
 ```
 
-# Example
-You can run 'example.py', that basically generates the following results.
+## Example
+
+You can run `example.py`, that basically generates the following results.
 
 ```python
 import numpy as np
@@ -36,7 +42,7 @@ import matplotlib.pyplot as plt
 ggplot_palette = sns.palettes.hls_palette(n_colors=1, l=0.65, s=1.0)
 sns.set_palette(palette=ggplot_palette)
 
-def plot1(title, filename):
+def plot(title, filename):
     data = pd.DataFrame({
         'x': np.random.randn(50),
         'y': np.random.randn(50),
@@ -53,10 +59,15 @@ def plot1(title, filename):
     fig.savefig(filename + '.jpg', bbox_inches='tight', dpi=150)
 
 with plt.style.context('ggplot_bw.mplstyle'):
-    plot1('ggplot_bw style', 'example-ggplot_bw')
+    plot('ggplot_bw style', 'example-ggplot_bw')
 
 with plt.style.context('ggplot_classic.mplstyle'):
-    plot1('ggplot_classic style', 'example-ggplot_classic')
+    plot('ggplot_classic style', 'example-ggplot_classic')
 ```
+
 ![example-ggplot_bw](https://user-images.githubusercontent.com/19313488/116784350-b774e700-aa8b-11eb-8eda-deba7e4e9b93.jpg)
 ![example-ggplot_classic](https://user-images.githubusercontent.com/19313488/116784351-b8a61400-aa8b-11eb-8352-b56b5b855735.jpg)
+
+## Development
+
+Run `python3 create_mplstyle.py bw` to create *ggplot_bw.mplstyle* and `python3 create_mplstyle.py classic` to create the *ggplot_classic.mplstyle* file.
