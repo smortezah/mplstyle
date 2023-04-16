@@ -2,8 +2,8 @@
 
 The following styles are currently available:
 
-- **ggplot_bw**: to mimic "theme_bw" (R)
-- **ggplot_classic**: to mimic "theme_classic" (R)
+- **ggplot_bw**: to mimic "theme_bw" (in R)
+- **ggplot_classic**: to mimic "theme_classic" (in R)
 
 ## Requirements
 
