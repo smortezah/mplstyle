@@ -9,7 +9,7 @@ font.size: 11.0
 font.weight: normal
 
 ## FIGURE
-figure.dpi: 70
+figure.dpi: 100
 figure.edgecolor: white
 figure.facecolor: white
 figure.frameon: False
