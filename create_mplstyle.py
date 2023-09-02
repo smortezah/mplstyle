@@ -26,7 +26,7 @@ def gen_header(theme: str) -> str:
         str: header information
     """
     return \
-        "## ggplot_" + theme.lower() + " matplotlib style sheet\n" \
+        f"## ggplot_{theme.lower()} matplotlib style sheet\n" \
         "## Author: Morteza Hosseini\n" \
         "## https://github.com/smortezah\n"
 
@@ -43,7 +43,7 @@ def backbone() -> dict:
         'font.weight': 'normal',  # 100, 200, 300, ..., 900 -> dflt: normal=400
         'font.size': base_size,
         #
-        'figure.dpi': 70,
+        'figure.dpi': 100,
         'figure.titlesize': base_size * 1.2,
         'figure.titleweight': 'normal',
         'figure.frameon': 'False',
@@ -134,18 +134,18 @@ def gen_save_mplstyle(style: str) -> None:
 
     parts = ['font', 'figure', 'axes', 'tick', 'legend', 'grid']
     for part in parts:
-        result += '\n' + '## ' + part.upper() + '\n'
+        result += f'\n## {part.upper()}\n'
         for key in sorted(dict):
             if part in key.split('.')[0]:
-                result += key + ': ' + str(dict[key]) + '\n'
+                result += f'{key}: {str(dict[key])}\n'
 
-    with open('ggplot_' + style + '.mplstyle', 'w') as output:
+    with open(f'ggplot_{style}.mplstyle', 'w') as output:
         output.write(result)
 
 
 if __name__ == '__main__':
-    style_in = sys.argv[1]
-    if style_in.lower() in SUPPORTED_STYLES:
-        gen_save_mplstyle(style_in.lower())
+    style = sys.argv[1].lower()
+    if style in SUPPORTED_STYLES:
+        gen_save_mplstyle(style)
     else:
-        raise ValueError(f"\"{style_in}\" style not supported.")
+        raise ValueError(f"\"{sys.argv[1]}\" style not supported.")
